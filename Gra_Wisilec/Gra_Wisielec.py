@@ -57,6 +57,7 @@ while True:
 
     show_state_of_game()
 
+#  - Praca nad projektem -
 #  ► Czy nie jest wpisywana cyfra
 #  ► Czy nie jest wpisywana jeszcze raz ta sama litera
 #  ► Czy nie jest wpissywana wiecej niz jedna litera
