@@ -61,8 +61,8 @@ while True:
 
     show_state_of_game()
 
-    Game = 1,
-        print ("Test")
+#  - Praca nad projektem -
+
 
 #  ► Czy nie jest wpisywana cyfra
 #  ► Czy nie jest wpisywana jeszcze raz ta sama litera
