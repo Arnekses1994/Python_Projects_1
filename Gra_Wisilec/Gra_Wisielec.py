@@ -20,7 +20,7 @@ def find_indexex(word, letter):
 
     return indexes
 
-def show_state_of_game():
+def show_state_of_game() -> object:
     print ()
     print (user_word)
     print ("Pozostało prób:", no_of_tries)
@@ -37,15 +37,9 @@ while True:
     letter: str = input("Podaj litere:  ")
     used_letters.append(letter)
 
-    found_indexex = find_indexex(word, letter)
-    if len(found_indexex) == 0:
-        print ("Nie ma takiej litery !")
-        no_of_tries -= 1
 
-        if no_of_tries == 0:
-            print ("Koniec gry:")
-            sys.exit(0)
-    else:
+    found_indexex = find_indexex(word, letter)
+    if len(found_indexex) != 0:
         index: int
         for index in found_indexex:
             user_word [index] = letter
@@ -53,9 +47,22 @@ while True:
         if "".join(user_word) == word:
             print ("-------------")
             print ("!! Brawo to jest to słowo !!")
-            sys.exit(0)
+            Game: str = input ("Czy chcesz grać dalej: ? ( tak / nie ) ")
+
+    else:
+        print   ("-------------")
+        print ("Nie ma takiej litery !")
+        print ("-------------")
+        no_of_tries -= 1
+
+        if no_of_tries == 0:
+            int(input("Koniec gry 1-Grasz  /  2-Koniec:"))
+
 
     show_state_of_game()
+
+    Game = 1,
+        print ("Test")
 
 #  ► Czy nie jest wpisywana cyfra
 #  ► Czy nie jest wpisywana jeszcze raz ta sama litera
