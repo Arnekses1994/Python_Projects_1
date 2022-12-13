@@ -87,7 +87,6 @@ while user_choice != 5:
         user_choice = int(input("Wybierz liczbę: "))
 
         if user_choice == 1:
-
             show_tasks()
 
         if user_choice == 2:
