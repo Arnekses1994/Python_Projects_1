@@ -49,6 +49,7 @@ while True:
             print ("!! Brawo to jest to słowo !!")
             Game: str = input ("Czy chcesz grać dalej: ? ( tak / nie ) ")
 
+
     else:
         print   ("-------------")
         print ("Nie ma takiej litery !")

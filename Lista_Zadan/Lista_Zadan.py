@@ -1,3 +1,20 @@
+
+from kivy.app import App
+from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.label import Widget
+
+class Cookie(FloatLayout):
+    pass
+class CookieApp(App):
+
+    def build (self):
+        return Widget()
+
+
+
+if __name__ == '__main__':
+    CookieApp().run()
+
 user_choice = -1
 tasks = []
 
@@ -5,7 +22,7 @@ def show_tasks(tasks_index=None):
     import os
     while os.path.getsize('tasks.txt') == 0:
             print ("----------------")
-            print("Indeks jest pusty")
+            print ("Indeks jest pusty")
             break
 
     task_index = 0
@@ -20,7 +37,7 @@ def add_task():
      
     tasks.append(task)
     print ("----------------")
-    print("Dodano zadanie! ")
+    print ("Dodano zadanie! ")
 
     file = open("tasks.txt","w")
     for task in tasks:
@@ -47,7 +64,7 @@ def delate_task():
         file.close()
 
     except ValueError:
-        print("----------------")
+        print ("----------------")
         print ("Podajemy tylko liczby !")
 
 def delete_all_tasks():
@@ -59,7 +76,7 @@ def delete_all_tasks():
     file.close()
 
     print ("----------------")
-    print("Usunięto wszystko ")
+    print ("Usunięto wszystko ")
 
 def load_tasks_from_file():
     try:
@@ -87,7 +104,6 @@ while user_choice != 5:
         user_choice = int(input("Wybierz liczbę: "))
 
         if user_choice == 1:
-
             show_tasks()
 
         if user_choice == 2:
@@ -112,6 +128,9 @@ while user_choice != 5:
         print ("----------------")
         print ("Podajemy tylko liczby !")
 
+if __name__ == '__name__':
+    CookieApp().run()
+
  #  █  Informacja o podwójnej informacji o wpisaniu złych danych ( Dublowanie sie komunikatu )
  #  █  Informacja o wpisaniu stringu do indexu
  #  █  Informacja o wpisaniu złych danych do indexu ( liczby wieksze i mnieszej )
@@ -122,4 +141,6 @@ while user_choice != 5:
  #  █  Usprawnienia w kwesti wizualnej
 
  #  ►  Kategoria Zadań ( Stworzyć liste - Dom / Praca / Sport )
- #  ►
+ #  ►  Stworzenie aplikacji obiektowej w Python
+ #  ►  Wymiana pliku txt na serwer sql
+ #  ►  Możliowśc odpalenia w przegladarce
